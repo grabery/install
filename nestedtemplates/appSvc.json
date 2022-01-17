@@ -24,7 +24,7 @@
 
     "resources": [
         {
-            "condition": "[not(equals(parameters('existingAppServicePlanID'), 'none'))]",
+            "condition": "[equals(parameters('existingAppServicePlanID'), 'none')]",
             "apiVersion": "2019-08-01",
             "type": "Microsoft.Web/serverfarms",
             "name": "[parameters('AppServicePlanName')]",
