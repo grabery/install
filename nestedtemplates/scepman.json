@@ -35,6 +35,12 @@
                 "description": "Specifies the name of the key vault."
             }
         },
+        "existingAppServicePlanID": {
+            "type": "string",
+            "metadata": {
+                "description": "Provide the AppServicePlan ID of an existing App Service Plan. Keep default value 'none' if you want to create a new one."
+            }
+        },
         "appServicePlanName": {
             "type": "string",
             "maxLength": 40
@@ -65,6 +71,9 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
+                    "existingAppServicePlanID": {
+                        "value": "[parameters('existingAppServicePlanID')]"
+                    },
                     "AppServicePlanName": {
                         "value": "[parameters('AppServicePlanName')]"
                     },
