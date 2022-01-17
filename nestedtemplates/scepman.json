@@ -124,6 +124,9 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
+                    "existingAppServicePlanID": {
+                        "value": "[parameters('existingAppServicePlanID')]"
+                    },
                     "AppServicePlanName": {
                         "value": "[parameters('AppServicePlanName')]"
                     },
